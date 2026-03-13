@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase } from "lucide-react";
+import { Briefcase, MapPin } from "lucide-react";
 import { portfolioData } from "../data";
 
 import VisualExplainer from "./VisualExplainer";
@@ -47,7 +47,15 @@ export default function Experience() {
               <div className="glass p-8 rounded-3xl hover:border-cyan-500/30 transition-all duration-500">
                 <span className="text-sm font-bold text-cyan-500 uppercase tracking-widest mb-2 block">{exp.period}</span>
                 <h3 className="text-2xl font-bold font-space-grotesk mb-1 text-white">{exp.role}</h3>
-                <p className="text-slate-300 font-medium mb-4">{exp.company}</p>
+                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mb-4">
+                  <p className="text-slate-300 font-medium">{exp.company}</p>
+                  {exp.location && (
+                    <div className="flex items-center gap-1.5 text-slate-500 text-xs py-1 px-2 rounded-full bg-white/5 border border-white/5">
+                      <MapPin size={12} className="text-cyan-500" />
+                      {exp.location}
+                    </div>
+                  )}
+                </div>
                 
                 <ul className="space-y-3">
                   {exp.description.map((item, i) => (

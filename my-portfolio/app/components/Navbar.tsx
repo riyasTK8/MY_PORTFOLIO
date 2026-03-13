@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Menu, X } from "lucide-react";
+import { Github, Instagram, Linkedin, Mail, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { portfolioData } from "../data";
 
@@ -44,6 +44,7 @@ export default function Navbar() {
               {[
                 { icon: Github, href: portfolioData.contact.github },
                 { icon: Linkedin, href: portfolioData.contact.linkedin },
+                { icon: Instagram, href: portfolioData.contact.instagram },
                 { icon: Mail, href: `mailto:${portfolioData.contact.email}` },
               ].map((social, i) => (
                 <motion.a

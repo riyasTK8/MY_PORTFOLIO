@@ -12,7 +12,8 @@ export const portfolioData = {
   experience: [
     {
       role: "MERN Stack Intern",
-      company: "Professional Placement",
+      company: "DevXtra Academy",
+      location: "Muttom-Aluva",
       period: "May 2025 - Present",
       description: [
         "Gained problem solving skills through consistently practicing pattern printing problems and array manipulation problems.",
@@ -51,7 +52,8 @@ export const portfolioData = {
   contact: {
     phone: "+91 9037753791",
     email: "mriyastk8@gmail.com",
-    linkedin: "linkedin.com/in/riyas-k-i",
-    github: "github.com/riyasTK8"
+    linkedin: "https://linkedin.com/in/riyas-k-i",
+    github: "https://github.com/riyasTK8",
+    instagram: "https://www.instagram.com/riyas.kr8s"
   }
 };

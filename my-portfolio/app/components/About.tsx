@@ -92,7 +92,7 @@ export default function About() {
             <div className="glass p-6 rounded-2xl hover:bg-white/5 transition-all">
               <MapPin className="text-cyan-500 mb-3" size={24} />
               <h4 className="font-bold text-white">Location</h4>
-              <p className="text-sm text-slate-400">Global / Remote</p>
+              <p className="text-sm text-slate-400">Ernakulam, Kerala</p>
             </div>
             <div className="glass p-6 rounded-2xl hover:bg-white/5 transition-all">
               <Code2 className="text-pink-600 mb-3" size={24} />

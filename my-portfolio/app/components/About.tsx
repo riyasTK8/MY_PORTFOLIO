@@ -40,7 +40,7 @@ export default function About() {
             <div className="space-y-8">
               {[
                 { year: "2017", text: "Journey Started", icon: GraduationCap },
-                { year: "2023", text: "Mastered MERN Stack", icon: Code2 },
+                { year: "2023", text: "Started specializing in MERN stack", icon: Code2 },
                 { year: "2025", text: "Professional Development", icon: Rocket },
                 { year: "Now", text: "Scaleable Solutions", icon: Cpu },
               ].map((step, i) => (

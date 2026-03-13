@@ -81,7 +81,8 @@ export default function Hero() {
               View Projects
             </a>
             <a 
-              href="/resume.pdf" 
+              href="/RIYAS.RESUME.pdf" 
+              download="RIYAS_RESUME.pdf"
               className="px-10 py-4 rounded-full glass border border-white/10 font-bold hover:bg-white/5 transition-all hover:scale-105"
             >
               Download CV

@@ -13,15 +13,14 @@ export default function SkillsExplainer() {
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
-            className="w-16 h-16 rounded-2xl glass border-cyan-500/30 flex items-center justify-center text-cyan-400"
+            className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl glass border-cyan-500/30 flex items-center justify-center text-cyan-400"
           >
-            <Smartphone size={32} />
+            <Smartphone size={24} className="sm:w-8 sm:h-8" />
           </motion.div>
           <span className="text-[10px] uppercase font-bold text-cyan-500">Frontend</span>
         </div>
 
-        {/* Sync Line */}
-        <div className="flex-1 px-4 relative">
+        <div className="hidden sm:block flex-1 px-4 relative">
           <motion.div 
             initial={{ width: 0 }}
             animate={{ width: "100%" }}
@@ -41,15 +40,14 @@ export default function SkillsExplainer() {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.3 }}
-            className="w-16 h-16 rounded-2xl glass border-purple-500/30 flex items-center justify-center text-purple-400"
+            className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl glass border-purple-500/30 flex items-center justify-center text-purple-400"
           >
-            <Server size={32} />
+            <Server size={24} className="sm:w-8 sm:h-8" />
           </motion.div>
           <span className="text-[10px] uppercase font-bold text-purple-500">Backend</span>
         </div>
 
-        {/* Sync Line */}
-        <div className="flex-1 px-4 relative">
+        <div className="hidden sm:block flex-1 px-4 relative">
           <motion.div 
             initial={{ width: 0 }}
             animate={{ width: "100%" }}
@@ -64,9 +62,9 @@ export default function SkillsExplainer() {
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.6 }}
-            className="w-16 h-16 rounded-2xl glass border-orange-500/30 flex items-center justify-center text-orange-400"
+            className="w-12 h-12 sm:w-16 sm:h-16 rounded-2xl glass border-orange-500/30 flex items-center justify-center text-orange-400"
           >
-            <Database size={32} />
+            <Database size={24} className="sm:w-8 sm:h-8" />
           </motion.div>
           <span className="text-[10px] uppercase font-bold text-orange-500">Database</span>
         </div>

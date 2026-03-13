@@ -11,9 +11,9 @@ export default function AboutExplainer() {
         <motion.div
           animate={{ y: [0, -10, 0] }}
           transition={{ duration: 4, repeat: Infinity }}
-          className="w-20 h-20 rounded-2xl bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400"
+          className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400"
         >
-          <User size={40} />
+          <User size={32} className="sm:w-10 sm:h-10" />
         </motion.div>
 
         {/* Floating Code Snippets */}
@@ -54,10 +54,9 @@ export default function AboutExplainer() {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1 + i * 0.3 }}
-              className="flex items-center gap-3 glass p-3 rounded-xl border-white/5"
+              className="flex items-center gap-2 sm:gap-3 glass p-2.5 sm:p-3 rounded-xl border-white/5"
             >
-              <item.icon size={16} className={item.color} />
-              <span className="text-xs font-bold text-slate-300 uppercase tracking-wider">{item.text}</span>
+              <item.icon size={14} className={`${item.color} shrink-0`} />
             </motion.div>
           ))}
         </div>

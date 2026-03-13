@@ -13,20 +13,20 @@ export default function ExperienceExplainer() {
           transition={{ duration: 4, repeat: Infinity }}
           className="text-center mb-8 relative z-10"
         >
-          <div className="w-20 h-20 rounded-full glass border-cyan-500/20 flex items-center justify-center mx-auto text-cyan-400 relative">
-             <Laptop size={40} />
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full glass border-cyan-500/20 flex items-center justify-center mx-auto text-cyan-400 relative">
+             <Laptop size={32} className="sm:w-10 sm:h-10" />
               <motion.div
                 animate={{ scale: [1, 1.2, 1] }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-cyan-500 text-black flex items-center justify-center"
+                className="absolute -top-1 -right-1 w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-cyan-500 text-black flex items-center justify-center"
               >
-                <Code size={12} />
+                <Code size={10} className="sm:w-3 sm:h-3" />
               </motion.div>
           </div>
         </motion.div>
 
         {/* Timeline Progress Animation */}
-        <div className="relative h-2 bg-white/5 rounded-full mx-10 border border-white/10">
+        <div className="relative h-1.5 sm:h-2 bg-white/5 rounded-full mx-6 sm:mx-10 border border-white/10">
           <motion.div
             initial={{ width: 0 }}
             animate={{ width: "100%" }}
@@ -46,11 +46,11 @@ export default function ExperienceExplainer() {
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: m.delay }}
-              className="absolute top-1/2 -mt-4 glass w-8 h-8 rounded-full border-cyan-500/20 flex flex-col items-center justify-center text-cyan-400"
+              className="absolute top-1/2 -mt-3 sm:-mt-4 glass w-6 h-6 sm:w-8 sm:h-8 rounded-full border-cyan-500/20 flex flex-col items-center justify-center text-cyan-400"
               style={{ left: `${(i / 3) * 100}%`, transform: "translateX(-50%)" }}
             >
-              <m.icon size={12} />
-              <span className="absolute -bottom-6 text-[8px] uppercase font-bold text-slate-400 font-mono whitespace-nowrap">
+              <m.icon size={10} className="sm:w-3 sm:h-3" />
+              <span className="absolute -bottom-8 sm:-bottom-6 text-[7px] sm:text-[8px] uppercase font-bold text-slate-400 font-mono whitespace-nowrap">
                 {m.label}
               </span>
             </motion.div>

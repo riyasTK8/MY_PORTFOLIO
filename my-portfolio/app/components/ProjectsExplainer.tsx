@@ -7,7 +7,7 @@ export default function ProjectsExplainer() {
   return (
     <div className="flex flex-col h-full gap-6 p-4">
       {/* Terminal Animation */}
-      <div className="glass bg-black/40 p-6 rounded-3xl border border-white/5 font-mono text-xs space-y-2 relative overflow-hidden">
+      <div className="glass bg-black/40 p-4 sm:p-6 rounded-3xl border border-white/5 font-mono text-[10px] sm:text-xs space-y-2 relative overflow-hidden">
         <div className="flex items-center gap-2 border-b border-white/10 pb-4 mb-4">
           <Terminal size={14} className="text-cyan-500" />
           <span className="text-slate-400 uppercase tracking-widest text-[10px] font-bold">deploy.sh</span>
@@ -44,7 +44,7 @@ export default function ProjectsExplainer() {
       </div>
 
       {/* Visual Deployment Flow */}
-      <div className="flex items-center justify-between px-8 py-4">
+      <div className="flex items-center justify-between px-4 sm:px-8 py-4">
         <motion.div 
           animate={{ y: [0, -5, 0] }}
           transition={{ duration: 2, repeat: Infinity }}

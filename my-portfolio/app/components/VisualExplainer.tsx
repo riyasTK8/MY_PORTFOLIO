@@ -34,7 +34,7 @@ export default function VisualExplainer({ children, className = "" }: VisualExpl
           y: 10 
         }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="glass rounded-[2.5rem] p-8 border-cyan-500/20 glow-cyan/10 aspect-video md:aspect-auto min-h-[300px] flex items-center justify-center overflow-hidden"
+        className="glass rounded-[2.5rem] p-4 sm:p-8 border-cyan-500/20 glow-cyan/10 aspect-auto min-h-[300px] flex items-center justify-center overflow-hidden"
       >
         <AnimatePresence mode="wait">
           {shouldPlay && (

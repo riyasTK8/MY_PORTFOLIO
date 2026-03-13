@@ -1,0 +1,89 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Github, Linkedin, Mail, Menu, X } from "lucide-react";
+import { useState } from "react";
+import { portfolioData } from "../data";
+
+const navLinks = [
+  { name: "About", href: "#about" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+];
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center p-6">
+      <motion.div 
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        className="glass rounded-full px-8 py-3 flex items-center gap-12 max-w-4xl w-full justify-between"
+      >
+        <span className="text-2xl font-bold font-space-grotesk tracking-tighter text-slate-900">
+                Muhammed <span className="text-cyan-500 group-hover:glow-cyan transition-all">Riyas.</span>
+        </span>
+
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <a 
+              key={link.name} 
+              href={link.href}
+                className="hidden md:block text-sm font-medium text-slate-400 hover:text-cyan-400 transition-colors relative group"
+            >
+              {link.name}
+            </a>
+          ))}
+        </div>
+
+        <div className="flex items-center gap-4">
+            <div className="hidden md:flex items-center gap-6">
+              {[
+                { icon: Github, href: portfolioData.contact.github },
+                { icon: Linkedin, href: portfolioData.contact.linkedin },
+                { icon: Mail, href: `mailto:${portfolioData.contact.email}` },
+              ].map((social, i) => (
+                <motion.a
+                  key={i}
+                  href={social.href}
+                  target="_blank"
+                  className="text-slate-400 hover:text-cyan-400 transition-colors"
+                  whileHover={{ scale: 1.1, y: -2 }}
+                >
+                  <social.icon size={20} />
+                </motion.a>
+              ))}
+            </div>
+          <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <X /> : <Menu />}
+          </button>
+        </div>
+      </motion.div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="absolute top-24 left-6 right-6 glass p-6 rounded-3xl md:hidden"
+        >
+          <div className="flex flex-col gap-4">
+            {navLinks.map((link) => (
+              <a 
+                key={link.name} 
+                href={link.href}
+                className="text-lg font-medium"
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+        </motion.div>
+      )}
+    </nav>
+  );
+}
